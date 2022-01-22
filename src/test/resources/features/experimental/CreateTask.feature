@@ -33,5 +33,5 @@ Feature: Create New Task
     Given Appium server with "Android" real application is running
     When I print login button name
     And I print SignIn button name
-    Then I confirm tests completed with result "REAL Android APP TEST PASSED SUCCESS"
+    Then I confirm tests completed with result "REAL Android APP TEST PASSED SUCCESS 1"
 
