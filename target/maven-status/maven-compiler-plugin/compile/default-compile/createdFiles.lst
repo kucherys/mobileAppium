@@ -1,5 +1,7 @@
+PageObjects/o1/EligibilityModalPage.class
+PageObjects/o1/ProductCarouselPage.class
 PageObjects/o1/LandingPage.class
 PageObjects/PageBase.class
-PageObjects/CreateTaskPage.class
-PageObjects/TasksListPage.class
+PageObjects/experimental/CreateTaskPage.class
+PageObjects/experimental/TasksListPage.class
 utils/JsonReader.class

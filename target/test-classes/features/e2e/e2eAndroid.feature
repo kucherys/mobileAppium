@@ -26,7 +26,6 @@ Feature: Check e2e Onboarding scenario for Android
       | I’m NOT an existing Al-Rajhi bank customer                                |
     And I close eligibility modal
 
-
   @e2e
   Scenario: Verify onboarding flow happy path
     Given Appium server with "Android" real application is running

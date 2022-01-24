@@ -1,5 +1,0 @@
-mutation EnterOtp($otp: String!) {
-  enterOtp(otp: $otp) {
-    success
-  }
-}
