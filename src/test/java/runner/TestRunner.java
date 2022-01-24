@@ -6,6 +6,6 @@ import tests.TestBase;
 @CucumberOptions(features="src/test/resources/features"
 ,glue = {"steps"}
 ,plugin = {"pretty","html:target/cucumber-html-report.html"}
-,tags = "@e2eAndroid")
+,tags = "@landAndroid")
 public class TestRunner extends TestBase {
 }
