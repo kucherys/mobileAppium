@@ -65,6 +65,12 @@ public class LandingSteps extends TestBase {
 
     }
 
+    @Then("Test completed successfully")
+    public void taskAddedSuccessfully() {
+        driver.hideKeyboard();
+        tearDown();
+    }
+
     @After
     public void stopAppiumServer() {
         System.out.println("Stop appium server form INITIAL STEPS CLASS");

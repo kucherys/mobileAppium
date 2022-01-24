@@ -1,4 +1,5 @@
 runner/TestRunner.class
-steps/CreateNewTaskSteps.class
 steps/LandingSteps.class
 tests/TestBase.class
+steps/ProductCarouselSteps.class
+steps/EligibilityModalSteps.class

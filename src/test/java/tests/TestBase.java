@@ -2,7 +2,6 @@ package tests;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -49,31 +48,6 @@ public class TestBase extends AbstractTestNGCucumberTests {
         Thread.sleep(6000);
     }
 
-    public static void Android_setUp() throws IOException, InterruptedException {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        StartAndroidEmulator();
-        capabilities.setCapability("platformVersion", " 7.1");
-        capabilities.setCapability("deviceName", "AndroidEmulator");
-        capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("app",
-                System.getProperty("user.dir") + "/apps/ToDo.apk");
-        driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), capabilities);
-    }
-
-    public static void Android_setUpModified() throws IOException, InterruptedException {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        StartAndroidEmulator();
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "AndroidEmulator");
-        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
-
-        capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 14);
-
-        capabilities.setCapability("app",
-                System.getProperty("user.dir") + "/apps/ToDo.apk");
-        driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), capabilities);
-    }
-
     public static void Android_setUpRyse(String appName) throws IOException, InterruptedException {
         File appDir = new File("src");
         File app = new File(appDir, appName);
@@ -90,33 +64,18 @@ public class TestBase extends AbstractTestNGCucumberTests {
 
     }
 
-    public void iOS_setUp() throws MalformedURLException {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("platformName", "iOS");
-        capabilities.setCapability("deviceName", "iPhone X");
-        capabilities.setCapability("automationName","XCUITest");
-        capabilities.setCapability("isHeadless",true);
-        capabilities.setCapability("showXcodeLog",true);
-        capabilities.setCapability("app",
-                System.getProperty("user.dir") + "/apps/DailyCheck.zip");
-        capabilities.setCapability("wdaStartupRetries", "4");
-        capabilities.setCapability("iosInstallPause","8000" );
-        capabilities.setCapability("wdaStartupRetryInterval", "20000");
-        driver = new IOSDriver<>(new URL("http://localhost:4723/wd/hub"), capabilities);
-    }
-
     public void iOS_setUpRyse() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "iOS");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.2");
         capabilities.setCapability("deviceName", "iPhone 12");
-        capabilities.setCapability("automationName","XCUITest");
-        capabilities.setCapability("isHeadless",true);
-        capabilities.setCapability("showXcodeLog",true);
+        capabilities.setCapability("automationName", "XCUITest");
+        capabilities.setCapability("isHeadless", true);
+        capabilities.setCapability("showXcodeLog", true);
         capabilities.setCapability("app",
                 System.getProperty("user.dir") + "/apps/iOS/Digibank.app");
         capabilities.setCapability("wdaStartupRetries", "4");
-        capabilities.setCapability("iosInstallPause","8000" );
+        capabilities.setCapability("iosInstallPause", "8000");
         capabilities.setCapability("wdaStartupRetryInterval", "20000");
         System.out.println("BEFORE SIMULATOR STARTED");
         driver = new IOSDriver<>(new URL("http://localhost:4723/wd/hub"), capabilities);
