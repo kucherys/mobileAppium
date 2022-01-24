@@ -36,5 +36,5 @@ jobs:
           target: ${{ matrix.target }}
           arch: x86_64
           profile: Nexus 6
-          script: mvn clean test -Dcucumber.options="--tags @e2eAndroid"
+          script: gradle test -DCucumber.options="--tags @landAndroid"
 
