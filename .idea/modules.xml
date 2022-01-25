@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Appium-TAU.iml" filepath="$PROJECT_DIR$/.idea/Appium-TAU.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AppiumGitHubActions.iml" filepath="$PROJECT_DIR$/.idea/modules/AppiumGitHubActions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AppiumGitHubActions.main.iml" filepath="$PROJECT_DIR$/.idea/modules/AppiumGitHubActions.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AppiumGitHubActions.test.iml" filepath="$PROJECT_DIR$/.idea/modules/AppiumGitHubActions.test.iml" />
     </modules>
   </component>
 </project>
